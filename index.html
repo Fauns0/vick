@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    #message {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    #btnOpen {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #btnOpen:hover {
+      background-color: #45a049;
+    }
+
+    #popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #popup-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin: auto; /* Adicionado para centralizar */
+    }
+
+    #btnClose {
+      background-color: #e74c3c;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #btnClose:hover {
+      background-color: #c0392b;
+    }
+
+    #btnContinue {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #btnContinue:hover {
+      background-color: #2980b9;
+    }
+
+    #gifSection {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="card">
+    <div id="message">
+      <p>Feliz Natal, meu amor!!</p>
+    </div>
+    <button id="btnOpen">Abrir Cartão</button>
+  </div>
+
+  <div id="popup">
+    <div id="popup-content">
+      <div id="initialSection">
+        <p>
+          Não sou muito fã de natal, porém sou muito fã de você,  por esse motivo vim le desejar um feliz Natal carinhoso e muito gay.
+          Desejo muitos sucessos,  felicidades,  conquistas e muita comida em seu buchinho, também para a sua família. 
+          Agradeço de coração por fazer parte da minha vida,  infelizmente não posso estar perto de ti no momento,  porém quero que saiba que sempre estarei aqui, cuidando de você da forma que puder, não importando a distância. 
+          Eu tenho muito orgulho de ti, pois você é uma pessoinha muito muito incrível, amo demais você e quero estar sempre ao seu lado, independente da situação. 
+          Yes sou muito xonado em ti, brigado brigado!!!
+        </p>
+        <button id="btnContinue">Continuar</button>
+      </div>
+      <div id="gifSection">
+        <p>Te amo, gatinha, linda, perfeita, gostosa, maravilhosa, incrível, fofa, dengosa...</p>
+        <img src="Gif.gif" alt="GIF de Exemplo" style="max-width: 500%; max-height: 500px;"><br>
+        <button id="btnClose">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('btnOpen').addEventListener('click', function() {
+      document.getElementById('popup').style.display = 'flex';
+    });
+
+    document.getElementById('btnClose').addEventListener('click', function() {
+      document.getElementById('popup').style.display = 'none';
+    });
+
+    document.getElementById('btnContinue').addEventListener('click', function() {
+      document.getElementById('initialSection').style.display = 'none';
+      document.getElementById('gifSection').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
